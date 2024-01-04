@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "mulish";
+  --bg-url: url(./img/bg.jpg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100%;
+}
+
+header {
+  max-width: 500px;
+  text-align: center;
+  margin: 3.2rem auto 0;
+}
+
+header h1 {
+  font-family: "Pacifico";
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+main {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.fotos {
+  max-width: 16rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: auto;
+  transition: all 200ms ease-out;
+}
+
+.df {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  background-color: rgb(255, 240, 254);
+  border-radius: 20px;
+  max-width: 360px;
+  margin: auto;
+}
+
+.df p {
+  max-width: 160px;
+  font-size: 1.6rem;
+  margin: auto;
+  text-align: center;
+  font-weight: 700;
+}
+
+footer h2 {
+  font-family: "Pacifico";
+  font-size: 3.2rem;
+  margin-top: 3.2rem;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+.item {
+  --delay: 0.2s;
+  animation: appear 0.4s var(--delay) backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
